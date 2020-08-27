@@ -1,13 +1,72 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+body #root,
+body #root .App,
+body #root .App,
+.ledger-page-container {
+  height: 100%;
+}
+
+body button.ant-btn-primary {
+  background: #1a7575;
+  background-color: #1a7575;
+  border-color: #1a7575;
+}
+body button.ant-btn-primary:focus,
+body button.ant-btn-primary:hover {
+  background: #298886;
+  border-color: #298886;
+}
+body button.ant-btn-primary:active {
+  background: #1d6362;
+  border-color: #1d6362;
+}
+
+body .ant-menu-item-selected {
+  color: #298886;
+}
+body .ant-menu-item-selected::before {
+  background: #298886;
+}
+body .ant-menu-vertical .ant-menu-item::after,
+body .ant-menu-vertical-left .ant-menu-item::after,
+body .ant-menu-vertical-right .ant-menu-item::after,
+body .ant-menu-inline .ant-menu-item::after {
+  border-right: 3px solid #298886;
+}
+body .ant-menu-item:hover,
+body .ant-menu-item-active,
+body .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+body .ant-menu-submenu-active,
+body .ant-menu-submenu-title:hover {
+  color: #298886;
+}
+
+body .mode-switch-component aside {
+  min-height: 100%;
+  padding-top: 5px;
+}
+body .mode-switch-component aside .ant-layout-sider-trigger {
+  background-color: #1a7575;
+  color: #fff;
+}
+body .mode-switch-component aside .ant-layout-sider-children .ant-menu-item {
+  display: flex;
+  align-items: center;
+}
+body .mode-switch-component aside .ant-layout-sider-children button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }

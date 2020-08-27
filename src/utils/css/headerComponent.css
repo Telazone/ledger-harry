@@ -1,0 +1,30 @@
+.header-component {
+    box-shadow: 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+}
+.header-component .banner {
+    margin: 0 -15px;
+    height: 0.5rem;
+    background-color: #1a7575;
+}
+.header-component .content {
+    min-height: 3rem;
+}
+.header-component .content .slogan {
+    text-align: left;
+}
+.header-component .content .slogan .name {
+    font-weight: bold;
+}
+.header-component .content .detail {
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 576px) {
+    .header-component .content .detail .date-section,
+    .header-component .content .detail .summary {
+        justify-content: flex-end !important;
+    }
+    .header-component .content .detail .summary .income-summary {
+        margin-right: 1rem;
+    }
+}
