@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Layout, Menu, Button } from 'antd';
 import {
     PieChartOutlined,
@@ -20,10 +20,11 @@ class ModeSwitchComponent extends Component {
         this.setState({ collapsed });
     };
 
-    render() {
+    // > 576px sider
+    pcPage() {
         return (
             <div className="mode-switch-component d-flex flex-column">
-                <Sider color="#1a7575" theme="light" collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
+                <Sider theme="light" collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <Button type="primary" icon={<PlusCircleOutlined />}>
                         {this.state.collapsed ? "" : "创建新的记账记录"}
                     </Button>
@@ -37,6 +38,41 @@ class ModeSwitchComponent extends Component {
                     </Menu>
                 </Sider>
             </div>
+        )
+    }
+    // mobile page
+    mobilePage() {
+        return (
+            <div className="mode-switch-component">
+                <Menu onClick={this.handleClick} defaultSelectedKeys={['1']} mode="horizontal">
+                    <Menu.Item key="1" icon={<UnorderedListOutlined />}>
+                        列表模式
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<PieChartOutlined />}>
+                        图表模式
+                    </Menu.Item>
+                </Menu>
+                {/* <Sider theme="light" collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
+                    <Button type="primary" icon={<PlusCircleOutlined />}>
+                        {this.state.collapsed ? "" : "创建新的记账记录"}
+                    </Button>
+                    <Menu defaultSelectedKeys={['1']} mode="horizontal">
+                        <Menu.Item key="1" icon={<UnorderedListOutlined />}>
+                            列表模式
+                        </Menu.Item>
+                        <Menu.Item key="2" icon={<PieChartOutlined />}>
+                            图表模式
+                        </Menu.Item>
+                    </Menu>
+                </Sider> */}
+            </div>
+        )
+    }
+    render() {
+        return (
+            <Fragment>
+                {window.outerWidth > 576 ? this.pcPage() : this.mobilePage()}
+            </Fragment>
         );
     }
 }

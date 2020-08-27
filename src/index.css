@@ -18,38 +18,48 @@ body #root .App,
 }
 
 body button.ant-btn-primary {
-  background: #1a7575;
-  background-color: #1a7575;
-  border-color: #1a7575;
+  background: #1a7575 !important;
+  background-color: #1a7575 !important;
+  border-color: #1a7575 !important;
 }
 body button.ant-btn-primary:focus,
 body button.ant-btn-primary:hover {
-  background: #298886;
-  border-color: #298886;
+  background: #298886 !important;
+  border-color: #298886 !important;
 }
 body button.ant-btn-primary:active {
-  background: #1d6362;
-  border-color: #1d6362;
+  background: #1d6362 !important;
+  border-color: #1d6362 !important;
 }
 
 body .ant-menu-item-selected {
-  color: #298886;
+  color: #298886 !important;
 }
 body .ant-menu-item-selected::before {
-  background: #298886;
+  background: #298886 !important;
 }
 body .ant-menu-vertical .ant-menu-item::after,
 body .ant-menu-vertical-left .ant-menu-item::after,
 body .ant-menu-vertical-right .ant-menu-item::after,
 body .ant-menu-inline .ant-menu-item::after {
-  border-right: 3px solid #298886;
+  border-right: 3px solid #298886 !important;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  border-bottom: 3px solid #298886 !important;
 }
 body .ant-menu-item:hover,
 body .ant-menu-item-active,
 body .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
 body .ant-menu-submenu-active,
 body .ant-menu-submenu-title:hover {
-  color: #298886;
+  color: #298886 !important;
 }
 
 body .mode-switch-component aside {
@@ -57,7 +67,7 @@ body .mode-switch-component aside {
   padding-top: 5px;
 }
 body .mode-switch-component aside .ant-layout-sider-trigger {
-  background-color: #1a7575;
+  background-color: #1a7575 !important;
   color: #fff;
 }
 body .mode-switch-component aside .ant-layout-sider-children .ant-menu-item {

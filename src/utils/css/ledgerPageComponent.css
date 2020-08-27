@@ -1,4 +1,4 @@
-.ledger-page-component{
+.ledger-page-component {
     height: calc(100% - 56px);
 }
 .ledger-page-component .row {
@@ -8,4 +8,10 @@
 .ledger-page-component .row .navigator {
     padding-left: 0;
     margin-top: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    .ledger-page-component .row .navigator {
+        padding-right: 0;
+    }
 }
