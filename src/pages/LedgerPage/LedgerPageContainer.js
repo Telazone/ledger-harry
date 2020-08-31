@@ -4,7 +4,18 @@ import HeaderContainer from "../../common/containers/HeaderContainer";
 class LedgerPageContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            width: window.innerWidth
+        }
+    }
+    componentDidMount() {
+        window.addEventListener('resize', () => {
+            if (window.innerWidth < 576) {
+                this.setState({
+                    width: window.innerWidth
+                })
+            }
+        })
     }
     render() {
         return (

@@ -14,4 +14,7 @@
     .ledger-page-component .row .navigator {
         padding-right: 0;
     }
+    .ledger-page-component .row .main-content {
+        align-items: flex-start !important;
+    }
 }

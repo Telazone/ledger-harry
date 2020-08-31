@@ -64,10 +64,13 @@ body .ant-menu-submenu-title:hover {
 
 body .mode-switch-component aside {
   min-height: 100%;
+  min-width: 100% !important;
   padding-top: 5px;
 }
 body .mode-switch-component aside .ant-layout-sider-trigger {
   background-color: #1a7575 !important;
+  min-width: 100% !important;
+  position: absolute;
   color: #fff;
 }
 body .mode-switch-component aside .ant-layout-sider-children .ant-menu-item {
@@ -79,4 +82,12 @@ body .mode-switch-component aside .ant-layout-sider-children button {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+body .mode-switch-component .ant-menu-horizontal .ant-menu-item span[role="img"] {
+  float: left;
+  margin-top: 1rem;
+}
+body .mode-switch-component .ant-menu-horizontal button span[role="img"] {
+  float: left;
+  margin-top: 0.2rem;
 }

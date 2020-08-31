@@ -51,20 +51,10 @@ class ModeSwitchComponent extends Component {
                     <Menu.Item key="2" icon={<PieChartOutlined />}>
                         图表模式
                     </Menu.Item>
-                </Menu>
-                {/* <Sider theme="light" collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <Button type="primary" icon={<PlusCircleOutlined />}>
-                        {this.state.collapsed ? "" : "创建新的记账记录"}
+                        新建记账
                     </Button>
-                    <Menu defaultSelectedKeys={['1']} mode="horizontal">
-                        <Menu.Item key="1" icon={<UnorderedListOutlined />}>
-                            列表模式
-                        </Menu.Item>
-                        <Menu.Item key="2" icon={<PieChartOutlined />}>
-                            图表模式
-                        </Menu.Item>
-                    </Menu>
-                </Sider> */}
+                </Menu>
             </div>
         )
     }
