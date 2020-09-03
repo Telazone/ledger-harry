@@ -18,3 +18,7 @@
         align-items: flex-start !important;
     }
 }
+
+:root .main-content > div {
+    width: 100%;
+}

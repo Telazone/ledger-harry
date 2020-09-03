@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import LedgerPageComponent from "./components/LedgerPageComponent";
 import HeaderContainer from "../../common/containers/HeaderContainer";
+import store from "../../state/store";
 class LedgerPageContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            width: window.innerWidth
-        }
+        this.state = store.getState();
+        this.storeChange = this.storeChange.bind(this);
+        store.subscribe(this.storeChange);
     }
     componentDidMount() {
         window.addEventListener('resize', () => {
@@ -21,9 +22,13 @@ class LedgerPageContainer extends Component {
         return (
             <div className="ledger-page-container">
                 <HeaderContainer></HeaderContainer>
-                <LedgerPageComponent></LedgerPageComponent>
+                <LedgerPageComponent isList={this.state.modeChangeReducer.isList}></LedgerPageComponent>
             </div>
         );
+    }
+
+    storeChange() {
+        this.setState(store.getState())
     }
 }
 

@@ -12,3 +12,8 @@ export const ledger = {
     outcomeLedger: [],
     incomeLedger: []
 };
+
+export const mode = {
+    isList: true,
+    isChart: false
+}

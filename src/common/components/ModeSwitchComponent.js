@@ -15,24 +15,25 @@ class ModeSwitchComponent extends Component {
         this.state = { collapsed: false, }
     }
 
-    onCollapse = collapsed => {
-        console.log(collapsed);
-        this.setState({ collapsed });
-    };
+    // onCollapse = collapsed => {
+    //     console.log(collapsed);
+    //     this.setState({ collapsed });
+    // };
 
     // > 576px sider
     pcPage() {
         return (
             <div className="mode-switch-component d-flex flex-column">
-                <Sider theme="light" collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
+                <Sider theme="light">
+                    {/* collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse} */}
                     <Button type="primary" icon={<PlusCircleOutlined />}>
                         {this.state.collapsed ? "" : "创建新的记账记录"}
                     </Button>
                     <Menu defaultSelectedKeys={['1']} mode="inline">
-                        <Menu.Item key="1" icon={<UnorderedListOutlined />}>
+                        <Menu.Item key="1" icon={<UnorderedListOutlined />} onClick={() => { this.props.enableListPage() }}>
                             列表模式
                         </Menu.Item>
-                        <Menu.Item key="2" icon={<PieChartOutlined />}>
+                        <Menu.Item key="2" icon={<PieChartOutlined />} onClick={() => { this.props.enableChartPage() }}>
                             图表模式
                         </Menu.Item>
                     </Menu>
@@ -45,10 +46,10 @@ class ModeSwitchComponent extends Component {
         return (
             <div className="mode-switch-component">
                 <Menu onClick={this.handleClick} defaultSelectedKeys={['1']} mode="horizontal">
-                    <Menu.Item key="1" icon={<UnorderedListOutlined />}>
+                    <Menu.Item key="1" icon={<UnorderedListOutlined />} onClick={() => { this.props.enableListPage() }}>
                         列表模式
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<PieChartOutlined />}>
+                    <Menu.Item key="2" icon={<PieChartOutlined />} onClick={() => { this.props.enableChartPage() }}>
                         图表模式
                     </Menu.Item>
                     <Button type="primary" icon={<PlusCircleOutlined />}>
